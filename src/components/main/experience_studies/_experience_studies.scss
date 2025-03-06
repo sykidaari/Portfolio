@@ -1,0 +1,122 @@
+@import '../../../global';
+
+#experience-studies {
+  @include flexbox(row, space-between, flex-start, $spacing-M);
+
+  @include box(
+    0,
+    $spacing-S $spacing-S,
+    $box-color-1,
+    $box-gradient-1,
+    $box-color-1,
+    $spacing-XXS,
+    $shadow-color-1
+  );
+
+  width: 100%;
+  max-width: 600px;
+
+  min-height: 200px;
+
+  position: relative;
+  left: 5%;
+
+  div {
+    @include flexbox(column, space-between, center, $spacing-S);
+
+    width: 100%;
+    max-width: 280px;
+
+    > h3 {
+      font-size: $font-ML;
+
+      font-weight: 800;
+      text-transform: uppercase;
+
+      color: $theme-color-3;
+      text-shadow: 0px 0px 2px $theme-color-2;
+    }
+
+    ul {
+      @keyframes fadeInTopToBottom {
+        0% {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      opacity: 0;
+      animation: fadeInTopToBottom 0.5s ease-in-out forwards;
+
+      text-align: center;
+      width: 100%;
+      max-width: 250px;
+
+      li {
+        @include flexbox(column, center, center, $spacing-XS);
+
+        h4 {
+          color: $theme-color-2;
+          font-size: $font-XS;
+          text-decoration: underline;
+        }
+        p {
+          font-size: $font-XS;
+          color: $theme-color-4;
+        }
+        aside {
+          align-self: flex-end;
+
+          font-size: $font-XXS;
+          font-family: $detail-font;
+          color: $theme-color-2;
+
+          margin-top: $spacing-XS;
+
+          span {
+            color: $detail-color-2;
+          }
+        }
+      }
+    }
+  }
+  .invisible > {
+    h3 {
+      align-self: center;
+      position: relative;
+
+      text-decoration: none;
+
+      cursor: pointer;
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -2px;
+        width: 100%;
+        height: 2px;
+        background: currentColor;
+        transform: scaleX(0);
+        transform-origin: center;
+        animation: underlineLoop 2s infinite alternate ease-in-out;
+      }
+
+      @keyframes underlineLoop {
+        0% {
+          transform: scaleX(0);
+        }
+        100% {
+          transform: scaleX(1);
+        }
+      }
+    }
+    ul {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+@import '../../global';
+
+main {
+  padding-top: 160px;
+
+  @include flexbox(column, center, center, 90px);
+
+  * {
+    max-width: 900px;
+  }
+}

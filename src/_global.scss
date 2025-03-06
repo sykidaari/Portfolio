@@ -1,0 +1,106 @@
+// * VARIABLES
+
+// COLORS
+$theme-color-1: rgb(35, 35, 35);
+$theme-color-2: rgb(255, 255, 255);
+$theme-color-3: rgb(0, 0, 0);
+$theme-color-4: rgb(202, 202, 202);
+$detail-color-1: #ae32f8;
+$detail-color-2: #74f0c7;
+
+$box-color-1: #00ffea38;
+$box-gradient-1: #0066ff49;
+
+$box-color-2: #6e00ae47;
+$box-gradient-2: #6200ff67;
+
+$box-color-3: rgba(13, 0, 255, 0.212);
+$box-gradient-3: rgba(81, 0, 255, 0.274);
+
+$shadow-color-1: #002c287e;
+$shadow-color-2: #0018168b;
+$shadow-color-3: #14002050;
+
+// FONTS
+$main-font: Inter, Arial, Helvetica, sans-serif;
+$title-font: Silkscreen;
+$detail-font: Firacode;
+
+// FONT SIZES
+$font-XXS: 10px;
+$font-XS: 15px;
+$font-S: 20px;
+$font-SM: 25px;
+$font-M: 30px;
+$font-ML: 35px;
+$font-L: 40px;
+$font-XL: 45px;
+$font-XXL: 50px;
+
+// SPACINGS
+$spacing-XXS: 5px;
+$spacing-XS: 10px;
+$spacing-S: 15px;
+$spacing-SM: 20px;
+$spacing-M: 25px;
+$spacing-ML: 30px;
+$spacing-L: 35px;
+$spacing-XL: 40px;
+$spacing-XXL: 45px;
+
+// * MIXINS
+@mixin flexbox($flex-direction, $justify-content, $align-items, $gap) {
+  display: flex;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  gap: $gap;
+}
+
+@mixin box(
+  $margin,
+  $padding,
+  $box-color,
+  $box-gradient,
+  $border-color,
+  $border-radius,
+  $shadow-color
+) {
+  margin: $margin;
+  padding: $padding;
+  background: linear-gradient(to right, $box-color, $box-gradient);
+
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+
+  box-shadow: -3px 3px 5px 0px $shadow-color;
+}
+
+@mixin backgroundIMG(
+  $top,
+  $left,
+  $height,
+  $width,
+  $opacity,
+  $brightness,
+  $img-path
+) {
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    top: $top;
+    left: $left;
+    height: $height;
+    width: $width;
+
+    opacity: $opacity;
+    filter: brightness($brightness);
+
+    background: url($img-path) center/cover;
+
+    z-index: -1;
+    border-radius: $spacing-XXS;
+    box-shadow: (-0px 0px 0.5px $theme-color-2);
+  }
+}

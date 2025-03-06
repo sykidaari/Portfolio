@@ -1,0 +1,19 @@
+@import '../../../../global';
+
+#aboutme {
+  width: 100%;
+  max-width: 350px;
+
+  @include flexbox(column, center, flex-start, $spacing-XS);
+
+  h3 {
+    font-family: $detail-font;
+    color: $theme-color-2;
+    font-size: $font-S;
+    letter-spacing: 1px;
+  }
+  p {
+    color: $theme-color-4;
+    font-size: $font-XS;
+  }
+}

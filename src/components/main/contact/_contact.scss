@@ -1,0 +1,74 @@
+@import '../../../global';
+
+#contact {
+  @include flexbox(column, center, flex-start, $spacing-XS);
+
+  position: relative;
+  left: 10%;
+
+  h3 {
+    font-size: $font-S;
+    font-family: $detail-font;
+    color: $theme-color-2;
+  }
+  h4 {
+    font-size: $font-ML;
+    font-family: $main-font;
+    color: $theme-color-2;
+
+    font-weight: 800;
+    text-transform: uppercase;
+
+    color: $theme-color-3;
+    text-shadow: 0px 0px 1.5px $theme-color-2;
+
+    span {
+      font-weight: 800;
+    }
+  }
+  form {
+    @include flexbox(column, center, center, $spacing-S);
+    @include box(
+      0,
+      $spacing-S,
+      $box-color-1,
+      $box-gradient-1,
+      $box-color-1,
+      $spacing-XXS,
+      $shadow-color-1
+    );
+    max-width: 500px;
+    width: 100%;
+
+    > * {
+      width: 100%;
+      font-size: $font-XS;
+      font-family: $main-font;
+      color: $theme-color-4;
+      @include box(
+        0,
+        $spacing-XXS,
+        $theme-color-1,
+        $theme-color-1,
+        $theme-color-4,
+        $spacing-XXS,
+        none
+      );
+    }
+    button {
+      cursor: pointer;
+
+      background: linear-gradient(to right, $box-color-3, $box-gradient-3);
+      color: $theme-color-3;
+      font-family: $detail-font;
+      font-weight: 700;
+      letter-spacing: 1px;
+      border-color: $detail-color-1;
+
+      &:hover {
+        background: linear-gradient(to right, $box-color-1, $box-gradient-1);
+        color: $theme-color-1;
+      }
+    }
+  }
+}

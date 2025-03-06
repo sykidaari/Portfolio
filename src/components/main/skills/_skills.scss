@@ -1,0 +1,85 @@
+@import '../../../global';
+
+#skills {
+  width: 100%;
+  max-width: 400px;
+
+  position: relative;
+  right: 10%;
+
+  @include flexbox(column, center, center, $spacing-S);
+
+  h3 {
+    text-align: center;
+    font-family: $title-font;
+    font-size: $font-L;
+    font-weight: 800;
+    color: $detail-color-1;
+    text-shadow: -1px 1px 1px $theme-color-3;
+  }
+  ul {
+    @include flexbox(row, space-evenly, center, $spacing-SM);
+    flex-wrap: wrap;
+
+    @include box(
+      0,
+      $spacing-S,
+      $box-color-3,
+      $box-gradient-3,
+      $box-color-3,
+      $spacing-XXS,
+      $shadow-color-3
+    );
+
+    li {
+      width: 100px;
+      height: 100px;
+      position: relative;
+
+      transition: transform 0.3s ease-in-out;
+      &:hover {
+        transform: scale(1.02);
+      }
+
+      img {
+        width: 100px;
+        filter: drop-shadow(0px 0px 1px $theme-color-2);
+      }
+
+      .tooltip {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+
+        top: 0;
+
+        p {
+          display: none;
+
+          font-size: $font-XXS;
+          color: $theme-color-3;
+
+          position: absolute;
+          bottom: -5px;
+          right: -5px;
+
+          opacity: 80%;
+
+          @include box(
+            0,
+            3px,
+            $theme-color-4,
+            $theme-color-4,
+            $box-color-3,
+            $spacing-XXS,
+            none
+          );
+        }
+
+        &:hover p {
+          display: inline-block;
+        }
+      }
+    }
+  }
+}

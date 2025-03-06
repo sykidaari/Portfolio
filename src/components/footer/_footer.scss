@@ -1,0 +1,80 @@
+@import '../../global';
+
+footer {
+  @include flexbox(row-reverse, space-evenly, flex-start, $spacing-L);
+
+  @include box(
+    0,
+    $spacing-S 0 $spacing-M 0,
+    $box-color-2,
+    $box-gradient-2,
+    $box-color-2,
+    $spacing-XXS,
+    $shadow-color-3
+  );
+
+  margin-top: 100px;
+  max-width: 800px;
+  position: relative;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  p {
+    @include box(
+      0,
+      $spacing-XS,
+      $box-color-1,
+      $box-gradient-1,
+      $box-color-1,
+      $spacing-XXS,
+      none
+    );
+    color: $theme-color-2;
+
+    font-family: $detail-font;
+    font-size: $font-XS;
+
+    span {
+      font-family: $title-font;
+      color: transparent;
+      font-size: $font-S;
+
+      background: linear-gradient(to right, $detail-color-1, $detail-color-2);
+      background-size: 200% 100%;
+      background-clip: text;
+
+      animation: gradientAnimation 2s infinite linear;
+    }
+
+    @keyframes gradientAnimation {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+  }
+  aside {
+    @include box(
+      0,
+      $spacing-XXS,
+      $box-color-2,
+      $box-gradient-2,
+      $box-color-2,
+      $spacing-XXS,
+      none
+    );
+    color: $theme-color-4;
+    font-size: $font-XXS;
+
+    a {
+      color: $theme-color-4;
+      text-decoration: underline;
+    }
+  }
+}

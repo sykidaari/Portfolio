@@ -1,0 +1,112 @@
+@import '../../../global';
+
+#projects {
+  @include flexbox(column, center, center, $spacing-XS);
+
+  h3 {
+    font-family: $title-font;
+    color: $detail-color-2;
+    text-align: center;
+    font-size: $font-ML;
+    font-weight: 800;
+
+    filter: brightness(1);
+
+    text-shadow: -1px 1px 1px $shadow-color-1;
+  }
+
+  > h4 {
+    text-align: center;
+    font-family: $detail-font;
+    letter-spacing: 1px;
+    color: $theme-color-2;
+    font-size: $font-XS;
+  }
+  #projects-list {
+    @include flexbox(row, space-between, center, $spacing-XXS);
+
+    overflow-x: auto;
+
+    width: 100%;
+
+    &::-webkit-scrollbar {
+      height: $spacing-XXS;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: linear-gradient(to right, $box-color-1, $box-gradient-1);
+      border-radius: $spacing-XXS;
+    }
+
+    .project {
+      @include box(
+        $spacing-S,
+        $spacing-S,
+        $box-color-2,
+        $box-gradient-2,
+        $box-color-2,
+        $spacing-XXS,
+        $shadow-color-3
+      );
+
+      height: 350px;
+
+      transition: transform 0.3s ease-in-out;
+
+      &:hover {
+        transform: scale(1.02);
+      }
+
+      img {
+        width: 200px;
+        height: 185px;
+        object-fit: cover;
+        border-radius: $spacing-XXS;
+      }
+      @include flexbox(column, space-between, center, $spacing-XS);
+
+      h4 {
+        text-align: center;
+        color: $detail-color-1;
+        font-size: $font-XS;
+        font-weight: 700;
+        text-shadow: -1px 1px 1px $shadow-color-3;
+      }
+      p {
+        text-align: center;
+        color: $theme-color-4;
+        font-size: $font-XS;
+        width: 90%;
+      }
+
+      .links ul {
+        @include flexbox(row, center, center, $spacing-XS);
+
+        li {
+          @include box(
+            0,
+            $spacing-XXS,
+            $box-color-3,
+            $box-gradient-3,
+            $box-color-3,
+            $spacing-XXS,
+            $shadow-color-3
+          );
+
+          a {
+            font-size: $font-XXS;
+            font-family: $detail-font;
+            white-space: nowrap;
+
+            color: $theme-color-4;
+            letter-spacing: 0.5px;
+
+            &:hover {
+              color: $theme-color-2;
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+}

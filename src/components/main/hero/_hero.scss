@@ -1,0 +1,15 @@
+@import '../../../global';
+
+#hero {
+  @include flexbox(row, center, center, $spacing-L);
+
+  @include box(
+    0,
+    $spacing-S $spacing-M,
+    $box-color-2,
+    $box-gradient-2,
+    $box-color-2,
+    $spacing-XXS,
+    $shadow-color-3
+  );
+}

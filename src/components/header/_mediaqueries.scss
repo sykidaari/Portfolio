@@ -1,0 +1,32 @@
+@media (max-width: 1024px) {
+  header {
+    @include flexbox(row, center, center, 0);
+
+    background: transparent;
+    background-color: transparent;
+    border: none;
+
+    box-shadow: none;
+    padding: 0;
+
+    backdrop-filter: none;
+    --webkit-backdrop-filter: none;
+
+    transition: gap 0.7s ease-in-out;
+
+    width: 95%;
+
+    #navbar {
+      li:not(:first-of-type) {
+        display: none;
+      }
+    }
+
+    #mobile-menu {
+      display: flex;
+      nav {
+        display: none;
+      }
+    }
+  }
+}

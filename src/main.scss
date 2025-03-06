@@ -1,0 +1,45 @@
+@import './global';
+
+@font-face {
+  font-family: Silkscreen;
+  font-style: normal;
+  src: url('/public/assets/fonts/Silkscreen/Silkscreen-Regular.ttf');
+}
+
+@font-face {
+  font-family: Firacode;
+  font-style: italic;
+  src: url('/public/assets/fonts/FiraCode-VariableFont_wght.ttf');
+}
+
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  src: url('/public/assets/fonts/Inter/Inter-VariableFont_opsz\,wght.ttf');
+}
+
+@font-face {
+  font-family: Inter;
+  font-style: italic;
+  src: url('/public/assets/fonts/Inter/Inter-Italic-VariableFont_opsz\,wght.ttf');
+}
+
+* {
+  box-sizing: border-box;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  font-weight: 400;
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $main-font;
+  background-image: url('/public/assets/IMGs/background_squares.png');
+  background-color: $theme-color-1;
+  overflow-x: hidden;
+}
