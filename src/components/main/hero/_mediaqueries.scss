@@ -1,0 +1,43 @@
+@import '../../../global';
+
+@media (max-width: 640px) {
+  #hero {
+    flex-direction: column;
+    gap: $spacing-S;
+    padding-bottom: $spacing-ML;
+  }
+}
+
+@media (max-width: 480px) {
+  #hero {
+    #card {
+      max-width: 80vw;
+    }
+    #aboutme {
+      max-width: 80vw;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  #hero {
+    padding-left: $spacing-S;
+    padding-right: $spacing-S;
+
+    #card {
+      h1 {
+        font-size: 70px;
+      }
+    }
+  }
+}
+
+@media (max-width: 300px) {
+  #hero {
+    #card {
+      h1 {
+        font-size: 50px;
+      }
+    }
+  }
+}

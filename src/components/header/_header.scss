@@ -38,7 +38,9 @@ header {
     }
 
     #logo {
+      display: flex;
       img {
+        align-self: center;
         height: 100px;
         width: 100px;
         filter: drop-shadow(-3px 3px 2px $shadow-color-1);
@@ -62,26 +64,4 @@ header {
       }
     }
   }
-
-  #mobile-menu {
-    @include flexbox(column, space-between, center, $spacing-L);
-
-    display: none;
-
-    #menu-button {
-      background: none;
-      img {
-        height: 40px;
-        width: 40px;
-
-        transition: width 0.3s ease, height 0.3s ease;
-      }
-    }
-    nav {
-      position: absolute;
-      top: 100px;
-    }
-  }
 }
-
-@import './mediaqueries';

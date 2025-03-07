@@ -1,0 +1,63 @@
+@import '../../../global';
+
+header {
+  #mobile-menu {
+    @include flexbox(column, space-between, center, $spacing-L);
+
+    display: none;
+
+    #menu-button {
+      background: none;
+
+      z-index: 10;
+      height: 100px;
+      position: relative;
+      top: 2.5px;
+
+      img {
+        height: 40px;
+        width: 40px;
+
+        transition: width 0.3s ease, height 0.3s ease;
+      }
+    }
+    nav {
+      position: absolute;
+      right: 0;
+      top: 0;
+
+      ul {
+        @include flexbox(column, flex-start, flex-end, 10vh);
+        font-size: $font-S;
+
+        @include box(
+          0,
+          150px $spacing-XL 0 10vw,
+          $box-color-1,
+          $box-gradient-1,
+          $box-color-1,
+          0,
+          none
+        );
+
+        height: 200vh;
+        overflow-y: hidden;
+
+        backdrop-filter: blur(7px);
+        --webkit-backdrop-filter: blur(7px);
+        z-index: 9;
+
+        a {
+          color: $theme-color-2;
+          font-size: $font-S;
+          font-family: $title-font;
+          text-shadow: (-3px 3px 2px $shadow-color-2);
+
+          &:hover {
+            color: $detail-color-2;
+          }
+        }
+      }
+    }
+  }
+}

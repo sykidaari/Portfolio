@@ -1,0 +1,38 @@
+@media (max-width: 1024px) {
+  #skills {
+    max-width: fit-content;
+    position: static;
+    ul {
+      width: 100%;
+      flex-wrap: nowrap;
+      justify-content: center;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  #skills {
+    ul li img {
+      width: 80px;
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  #skills {
+    max-width: 400px;
+    ul {
+      flex-wrap: wrap;
+
+      li img {
+        width: 100px;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  #skills ul li img {
+    width: 80px;
+  }
+}

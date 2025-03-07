@@ -1,6 +1,7 @@
 export const adjustScroll = () => {
   document.querySelectorAll('header a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener('click', (e) => {
+      const link = e.target.closest('a');
       const target = document.querySelector(anchor.getAttribute('href'));
 
       if (!target) return;
@@ -12,10 +13,10 @@ export const adjustScroll = () => {
       let targetPosition =
         target.getBoundingClientRect().top + window.scrollY - navbarHeight;
 
-      if ((e.target.id = 'logo')) {
+      if (link.id === 'logo') {
         targetPosition = 0;
       }
-      if (e.target.innerText === 'About Me') {
+      if (link.innerText === 'About Me') {
         targetPosition -= 150;
       }
 

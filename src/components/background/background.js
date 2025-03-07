@@ -16,9 +16,9 @@ export const background = () => {
     let size = Math.random() * 3 + 1;
     let x = Math.random() * 100;
     let y = Math.random() * 100;
-    let speed = Math.random() * 2 + 0.5;
-    let floatSpeed = Math.random() * 0.5 + 0.1;
-    let floatAmplitude = Math.random() * 3 + 1;
+    let speed = Math.random() * 2 + 1;
+    let floatSpeed = Math.random() * 0.5 + 1;
+    let floatAmplitude = Math.random() * 3 + 2;
 
     star.style.width = `${size}px`;
     star.style.height = `${size}px`;

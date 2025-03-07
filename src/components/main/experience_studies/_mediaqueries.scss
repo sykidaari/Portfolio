@@ -1,0 +1,18 @@
+@import '../../../global';
+
+@media (max-width: 1024px) {
+  #experience-studies {
+    left: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  #experience-studies {
+    flex-direction: column;
+    width: fit-content;
+
+    div {
+      padding-bottom: $spacing-S;
+    }
+  }
+}

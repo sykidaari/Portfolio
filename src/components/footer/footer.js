@@ -1,6 +1,7 @@
 import { createAndAppendChild } from '../../utils/domUtils/createAndAppendChild';
 
 import './_footer.scss';
+import './_mediaqueries.scss';
 
 export const footer = () => {
   const footer = createAndAppendChild('#app', 'footer');

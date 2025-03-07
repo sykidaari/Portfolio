@@ -1,0 +1,25 @@
+@import '../../global';
+
+@media (max-width: 1024px) {
+  footer {
+    max-width: calc(100% - 50px);
+
+    p,
+    aside {
+      margin: $spacing-XS;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  footer {
+    flex-direction: column;
+    align-items: center;
+    gap: $spacing-XS;
+
+    p,
+    aside {
+      margin: 0 $spacing-S;
+    }
+  }
+}

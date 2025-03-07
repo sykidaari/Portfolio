@@ -2,6 +2,8 @@
 
 main {
   padding-top: 160px;
+  padding-left: $spacing-M;
+  padding-right: $spacing-M;
 
   @include flexbox(column, center, center, 90px);
 

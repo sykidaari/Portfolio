@@ -21,6 +21,7 @@ footer {
   transform: translateX(-50%);
 
   p {
+    width: fit-content;
     @include box(
       0,
       $spacing-XS,
@@ -28,7 +29,7 @@ footer {
       $box-gradient-1,
       $box-color-1,
       $spacing-XXS,
-      none
+      transparent
     );
     color: $theme-color-2;
 
@@ -60,6 +61,7 @@ footer {
     }
   }
   aside {
+    width: fit-content;
     @include box(
       0,
       $spacing-XXS,

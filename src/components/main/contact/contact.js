@@ -1,5 +1,6 @@
 import { createAndAppendChild } from '../../../utils/domUtils/createAndAppendChild';
 import './_contact.scss';
+import './_mediaqueries.scss';
 
 export const contact = () => {
   const contact = createAndAppendChild('main', 'section', { id: 'contact' });

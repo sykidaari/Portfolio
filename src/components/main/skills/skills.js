@@ -1,6 +1,7 @@
 import { createAndAppendChild } from '../../../utils/domUtils/createAndAppendChild';
 import { data } from './data';
 import './_skills.scss';
+import './_mediaqueries.scss';
 
 export const skills = () => {
   const skills = createAndAppendChild('main', 'section', { id: 'skills' });

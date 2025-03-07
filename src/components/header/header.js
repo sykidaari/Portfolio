@@ -1,8 +1,8 @@
 import './_header.scss';
 import { data } from './data';
 import { createAndAppendChild } from '../../utils/domUtils/createAndAppendChild';
-import { mobileHeaderAnimation, sizeAnimation } from './animations';
-import { toggleMobileMenu } from './toggleMobileMenu';
+import { sizeAnimation } from './animations';
+import { mobile } from './mobile/mobile';
 
 export const header = () => {
   const header = createAndAppendChild('#app', 'header');
@@ -26,27 +26,7 @@ export const header = () => {
     });
   });
 
-  const mobileMenu = createAndAppendChild(header, 'div', { id: 'mobile-menu' });
-  const menuButton = createAndAppendChild(mobileMenu, 'button', {
-    id: 'menu-button'
-  });
-  const menuButtonIMG = createAndAppendChild(menuButton, 'img', {
-    src: data.menuButton.src,
-    alt: data.menuButton.alt
-  });
-  const mobileNavbar = createAndAppendChild(mobileMenu, 'nav');
-  const mobileNavbarUl = createAndAppendChild(mobileNavbar, 'ul');
-
-  data.navbarOptions.forEach((option) => {
-    const li = createAndAppendChild(mobileNavbarUl, 'li');
-    const a = createAndAppendChild(li, 'a', {
-      innerText: option.innerText,
-      href: option.href
-    });
-  });
-
-  menuButton.addEventListener('click', toggleMobileMenu);
-
   sizeAnimation();
-  mobileHeaderAnimation();
+
+  mobile();
 };

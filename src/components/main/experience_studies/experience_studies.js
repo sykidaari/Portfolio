@@ -1,4 +1,5 @@
 import './_experience_studies.scss';
+import './_mediaqueries.scss';
 import { createAndAppendChild } from '../../../utils/domUtils/createAndAppendChild';
 import { experience } from './experience/experience';
 import { studies } from './studies/studies';

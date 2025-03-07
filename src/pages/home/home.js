@@ -10,5 +10,5 @@ export const home = () => {
   main();
   footer();
   adjustScroll();
-  // background();
+  background();
 };

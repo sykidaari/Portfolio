@@ -1,3 +1,5 @@
+@import '../../global';
+
 @media (max-width: 1024px) {
   header {
     @include flexbox(row, center, center, 0);
@@ -7,18 +9,28 @@
     border: none;
 
     box-shadow: none;
-    padding: 0;
+    padding-top: $spacing-S;
 
     backdrop-filter: none;
     --webkit-backdrop-filter: none;
 
     transition: gap 0.7s ease-in-out;
 
-    width: 95%;
+    width: 100%;
+    padding-left: calc(2vw + 20px);
+    padding-right: calc(2vw + 30px);
 
     #navbar {
+      height: 100px;
       li:not(:first-of-type) {
         display: none;
+      }
+      li {
+        align-self: center;
+        height: 100px;
+        a {
+          height: 100px;
+        }
       }
     }
 
@@ -28,5 +40,33 @@
         display: none;
       }
     }
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    padding-left: calc(2vw + 30px);
+    padding-right: calc(2vw + 40px);
+  }
+}
+
+@media (max-width: 640px) {
+  header {
+    padding-left: calc(2vw + 40px);
+    padding-right: calc(2vw + 50px);
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding-left: calc(2vw + 50px);
+    padding-right: calc(2vw + 60px);
+  }
+}
+
+@media (max-width: 350px) {
+  header {
+    padding-left: calc(2vw + 50px);
+    padding-right: calc(2vw + 70px);
   }
 }

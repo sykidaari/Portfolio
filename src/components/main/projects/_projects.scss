@@ -3,6 +3,9 @@
 #projects {
   @include flexbox(column, center, center, $spacing-XS);
 
+  width: 100%;
+  padding: 0 $spacing-M;
+
   h3 {
     font-family: $title-font;
     color: $detail-color-2;
