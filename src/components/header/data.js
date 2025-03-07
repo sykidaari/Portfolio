@@ -7,5 +7,5 @@ export const data = {
     { innerText: 'Contact', href: '#contact' }
   ],
 
-  menuButton: { src: '/public/assets/IMGs/menuButton.svg', alt: 'Menu button' }
+  menuButton: { src: '/assets/IMGs/menuButton.svg', alt: 'Menu button' }
 };
