@@ -14,7 +14,7 @@ export const header = () => {
   const logoLi = createAndAppendChild(navbarUl, 'li');
   const logo = createAndAppendChild(logoLi, 'a', { href: '#logo', id: 'logo' });
   const logoIMG = createAndAppendChild(logo, 'img', {
-    src: './public/assets/IMGs/logo.svg',
+    src: '/assets/IMGs/logo.svg',
     alt: 'Kira Liebkind logo'
   });
 
