@@ -15,17 +15,18 @@ export const mobileHeaderAnimation = () => {
 
   const animation = (e) => {
     if (matchMedia('(max-width: 1024px)').matches) {
-      header.style.gap =
-        window.scrollY > 100 || e.type === 'click' ? '90%' : '0';
+      if (menu.style.display === 'flex') {
+        header.style.gap = '90%';
+      } else if (window.scrollY <= 100 || e.type === 'click') {
+        header.style.gap = '0';
+      } else if (window.scrollY > 100 || e.type === 'click') {
+        header.style.gap = '90%';
+      }
 
       menuImg.style.height =
         window.scrollY > 100 || e.type === 'click' ? '30px' : '40px';
       menuImg.style.width =
         window.scrollY > 100 || e.type === 'click' ? '30px' : '40px';
-
-      if (menu.style.display === 'flex') {
-        header.style.gap = '90%';
-      }
     }
   };
   window.addEventListener('scroll', animation);
