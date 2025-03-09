@@ -20,7 +20,6 @@ export const card = () => {
     });
 
     if (i === linksData.length - 1) {
-      console.log('boo');
       a.target = '_self';
     }
 
