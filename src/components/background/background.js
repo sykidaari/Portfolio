@@ -11,14 +11,14 @@ export const background = () => {
   const stars = [];
 
   for (let i = 0; i < numStars; i++) {
-    let star = document.createElement('div');
+    const star = document.createElement('div');
     star.classList.add('star');
-    let size = Math.random() * 3 + 1;
-    let x = Math.random() * 100;
-    let y = Math.random() * 100;
-    let speed = Math.random() * 2 + 1;
-    let floatSpeed = Math.random() * 0.5 + 1;
-    let floatAmplitude = Math.random() * 3 + 2;
+    const size = Math.random() * 3 + 1;
+    const x = Math.random() * 100;
+    const y = Math.random() * 100;
+    const speed = Math.random() * 2 + 1;
+    const floatSpeed = Math.random() * 0.5 + 1;
+    const floatAmplitude = Math.random() * 3 + 2;
 
     star.style.width = `${size}px`;
     star.style.height = `${size}px`;
@@ -39,11 +39,11 @@ export const background = () => {
     time += 0.02;
 
     stars.forEach((star) => {
-      let speed = parseFloat(star.dataset.speed);
-      let floatSpeed = parseFloat(star.dataset.floatSpeed);
-      let floatAmplitude = parseFloat(star.dataset.floatAmplitude);
+      const speed = parseFloat(star.dataset.speed);
+      const floatSpeed = parseFloat(star.dataset.floatSpeed);
+      const floatAmplitude = parseFloat(star.dataset.floatAmplitude);
 
-      let floatOffset = Math.sin(time * floatSpeed) * floatAmplitude;
+      const floatOffset = Math.sin(time * floatSpeed) * floatAmplitude;
 
       star.style.transform = `translateY(${
         scrollY * speed * 0.1 + floatOffset

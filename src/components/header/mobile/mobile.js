@@ -30,5 +30,18 @@ export const mobile = () => {
 
     menuButton.addEventListener('click', toggleMobileMenu);
     mobileHeaderAnimation();
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const menu = document.querySelector('#mobile-menu nav');
+      document.addEventListener('click', (e) => {
+        if (
+          menu.style.display === 'flex' &&
+          !menu.contains(e.target) &&
+          !menuButton.contains(e.target)
+        ) {
+          toggleMobileMenu();
+        }
+      });
+    });
   }
 };
